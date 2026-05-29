@@ -1,16 +1,18 @@
 # Robotics Math Sandbox
 
-A collection of mathematical and robotics experiments implemented in Roblox and Luau.
+A collection of mathematical and robotics experiments implemented in Roblox.
 
-## Topics
+Topics:
 
 - Vector visualization
 - Coordinate frames
 - CFrame transformations
-- Rotation matrices
+- Ray visualization
 - LookAt derivation
+- Parametric curves
 - SE(3) interpolation
 
-## Status
+Purpose:
 
-Some topics are exploratory and stored as future references while learning robotics, computer graphics, and rigid body transformations.
+To explore the mathematics behind robotics, computer graphics, and game development.
+
