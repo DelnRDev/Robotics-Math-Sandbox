@@ -1,39 +1,68 @@
 # Deriving CFrame.lookAt
 
-Given:
+Given two points:
 
-pointA
+$$
+\vec{p}_A
+$$
 
-pointB
+and
 
-Forward:
+$$
+\vec{p}_B
+$$
 
-f̂ = (pointB - pointA) / ||pointB - pointA||
+Forward direction:
 
-Back:
+$$
+\hat{f}=
+\frac{\vec{p}_B-\vec{p}_A}
+{\left\|\vec{p}_B-\vec{p}_A\right\|}
+$$
 
-b̂ = -f̂
+Back direction:
 
-World Up:
+$$
+\hat{b}=
+-\hat{f}
+$$
 
-ŷ = (0,1,0)
+World up:
 
-Right:
+$$
+\hat{y}=
+\begin{bmatrix}
+0\\
+1\\
+0
+\end{bmatrix}
+$$
 
-r̂ = ŷ × b̂
+Right vector:
 
-Up:
+$$
+\hat{r}=
+\hat{y}
+\times
+\hat{b}
+$$
 
-û = b̂ × r̂
+Up vector:
 
-Construct frame:
+$$
+\hat{u}=
+\hat{b}
+\times
+\hat{r}
+$$
 
-R = [ r̂ û b̂ ]
+Rotation matrix:
 
-Transform:
-
-T =
-[
-R p
-0 1
-]
+$$
+R=
+\begin{bmatrix}
+| & | & |\\
+\hat{r} & \hat{u} & \hat{b}\\
+| & | & |
+\end{bmatrix}
+$$

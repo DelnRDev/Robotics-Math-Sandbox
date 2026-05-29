@@ -1,21 +1,70 @@
+
+
 # Coordinate Frames
 
-A coordinate frame consists of three orthonormal vectors:
+A coordinate frame is a set of orthonormal basis vectors attached to an object.
 
-r̂ = right
+In Roblox, a `CFrame` stores both position and orientation:
 
-û = up
+$$
+T=
+\begin{bmatrix}
+R & \vec{p}\\
+0 & 1
+\end{bmatrix}
+$$
 
-f̂ = forward
+where
+
+$$
+R=
+\begin{bmatrix}
+| & | & |\\
+\hat{r} & \hat{u} & \hat{b}\\
+| & | & |
+\end{bmatrix}
+$$
+
+and
+
+$$
+\vec{p}=
+\begin{bmatrix}
+x\\
+y\\
+z
+\end{bmatrix}
+$$
 
 Roblox convention:
 
-XVector = right
+$$
+\hat{r}=
+\text{RightVector}
+$$
 
-YVector = up
+$$
+\hat{u}=
+\text{UpVector}
+$$
 
-LookVector = forward
+$$
+\hat{b}=
+\text{ZVector}
+$$
 
-ZVector = back
+$$
+\hat{f}=
+\text{LookVector}=
+-\hat{b}
+$$
 
-LookVector = -ZVector
+So:
+
+```lua
+local cf = part.CFrame
+
+local rHat = cf.RightVector
+local uHat = cf.UpVector
+local fHat = cf.LookVector
+local bHat = -fHat

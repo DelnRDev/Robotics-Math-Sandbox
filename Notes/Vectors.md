@@ -1,19 +1,56 @@
 # Vectors
 
+A vector can represent displacement, direction, or velocity.
+
 Given two points:
 
-A = (x₁,y₁,z₁)
+$$
+\vec{p}_A=
+\begin{bmatrix}
+x_A\\
+y_A\\
+z_A
+\end{bmatrix}
+$$
 
-B = (x₂,y₂,z₂)
+and
 
-The displacement vector is:
+$$
+\vec{p}_B=
+\begin{bmatrix}
+x_B\\
+y_B\\
+z_B
+\end{bmatrix}
+$$
 
-v = B - A
+the displacement from \(A\) to \(B\) is
 
-Magnitude:
+$$
+\vec{v}=
+\vec{p}_B-\vec{p}_A
+$$
 
-||v|| = √(vx² + vy² + vz²)
+The magnitude is
 
-Unit Vector:
+$$
+\|\vec{v}\|=
+\sqrt{v_x^2+v_y^2+v_z^2}
+$$
 
-v̂ = v / ||v||
+The unit vector is
+
+$$
+\hat{v}=
+\frac{\vec{v}}{\|\vec{v}\|}
+$$
+
+In Luau:
+
+```lua
+local pointA = Vector3.new(6, 1, 3)
+local pointB = Vector3.new(2, 4, 5)
+
+local vectorV = pointB - pointA
+local length = vectorV.Magnitude
+local vHat = vectorV.Unit

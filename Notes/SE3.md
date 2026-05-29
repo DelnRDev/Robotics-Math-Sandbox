@@ -1,35 +1,38 @@
 # SE(3)
 
-A rigid body transform consists of:
+A rigid body transform is
 
-T =
-[
-R p
-0 1
-]
+$$
+T=
+\begin{bmatrix}
+R & \vec{p}\\
+0 & 1
+\end{bmatrix}
+$$
 
-where:
+where
 
-R ∈ SO(3)
+$$
+R \in SO(3)
+$$
 
-p ∈ ℝ³
+and
+
+$$
+\vec{p}\in\mathbb{R}^3
+$$
 
 Interpolation:
 
-T(α)
-=
-T₀ exp(α log(T₀⁻¹T₁))
-
-Applications:
-
-- Robotics
-- Computer Graphics
-- Animation
-- Motion Planning
-
-Prerequisites:
-
-- Linear Algebra
-- Rotation Matrices
-- Matrix Exponential
-- Lie Groups
+$$
+T(\alpha)=
+T_0
+\exp
+\left(
+\alpha
+\log
+\left(
+T_0^{-1}T_1
+\right)
+\right)
+$$
