@@ -2,7 +2,7 @@
 
 A collection of mathematical and robotics experiments implemented in Roblox.
 
-##Topics:
+## Topics:
 
 - Vector visualization
 - Coordinate frames
@@ -12,7 +12,7 @@ A collection of mathematical and robotics experiments implemented in Roblox.
 - Parametric curves
 - SE(3) interpolation
 
-##Purpose:
+## Purpose:
 
 To explore the mathematics behind robotics, computer graphics, and game development.
 
